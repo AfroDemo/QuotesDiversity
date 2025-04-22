@@ -1,0 +1,114 @@
+body {
+  font-family: "Inter", -apple-system, BlinkMacSystemFont, sans-serif;
+  line-height: 1.6;
+}
+
+.site-title {
+  position: relative;
+  display: inline-block;
+}
+.site-title:hover .fa-quote-left {
+  transform: translateX(-5px);
+}
+.site-title:hover .fa-quote-right {
+  transform: translateX(5px);
+}
+.site-title .fa-quote-left,
+.site-title .fa-quote-right {
+  transition: transform 0.3s ease;
+}
+
+.quote-card {
+  transition: all 0.3s ease;
+  transform: translateY(0);
+  backface-visibility: hidden;
+}
+.quote-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1);
+}
+.quote-card .quote-text {
+  position: relative;
+  padding-left: 1.5rem;
+}
+.quote-card .quote-text::before {
+  content: '"';
+  position: absolute;
+  left: 0;
+  top: -0.5rem;
+  font-size: 3rem;
+  color: rgba(79, 70, 229, 0.1);
+  font-family: Georgia, serif;
+  line-height: 1;
+}
+.quote-card .author-image {
+  width: 50px;
+  height: 50px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border: 3px solid white;
+}
+.quote-card .category-badge {
+  display: inline-block;
+  padding: 0.25rem 0.75rem;
+  border-radius: 9999px;
+  font-size: 0.75rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+.quote-card .category-badge.inspiration {
+  background-color: rgba(99, 102, 241, 0.1);
+  color: #6366f1;
+}
+.quote-card .category-badge.life {
+  background-color: rgba(16, 185, 129, 0.1);
+  color: #10b981;
+}
+.quote-card .category-badge.success {
+  background-color: rgba(245, 158, 11, 0.1);
+  color: #f59e0b;
+}
+.quote-card .category-badge.love {
+  background-color: rgba(244, 63, 94, 0.1);
+  color: #f43f5e;
+}
+.quote-card .category-badge.wisdom {
+  background-color: rgba(139, 92, 246, 0.1);
+  color: #8b5cf6;
+}
+.quote-card .category-badge.humor {
+  background-color: rgba(20, 184, 166, 0.1);
+  color: #14b8a6;
+}
+.quote-card .category-badge.motivation {
+  background-color: rgba(59, 130, 246, 0.1);
+  color: #3b82f6;
+}
+.quote-card .category-badge.leadership {
+  background-color: rgba(139, 92, 246, 0.1);
+  color: #8b5cf6;
+}
+.quote-card .category-badge.love {
+  background-color: rgba(236, 72, 153, 0.1);
+  color: #ec4899;
+}
+
+@media (max-width: 768px) {
+  .quote-card {
+    margin-bottom: 1.5rem;
+  }
+}
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+.fade-in {
+  animation: fadeIn 0.5s ease forwards;
+}/*# sourceMappingURL=main.css.map */
